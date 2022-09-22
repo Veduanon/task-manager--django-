@@ -1,0 +1,13 @@
+{% extends "hello/base.html" %}
+{% block header %}
+    <h1>Главная</h1>
+{% endblock header %}
+{% block content %}
+    <p>Список задач</p>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task.title }}</li>
+            <li>{{ task.task }}</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

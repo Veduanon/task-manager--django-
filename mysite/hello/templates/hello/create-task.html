@@ -1,0 +1,14 @@
+{% extends "hello/base.html" %}
+
+{% block header %}
+    <h1>Создание задачи</h1>
+{% endblock header %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.title }} <br>
+        {{ form.task }} <br>
+        <input type="submit" value="Создать">
+    </form>
+{% endblock content %}
